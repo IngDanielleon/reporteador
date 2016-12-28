@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Redirect;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Redirect;
+use Session;
 
 class FrontController extends Controller
 {
@@ -16,6 +17,7 @@ class FrontController extends Controller
     public function index()
     {
         //
+
         return view('ingreso.registro');
     }
 
@@ -30,8 +32,7 @@ class FrontController extends Controller
         return view('estado.buscar');
     }
 
-
-      /**
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
@@ -40,7 +41,7 @@ class FrontController extends Controller
     public function edit()
     {
         //
-          return view('respuesta.login');
+        return view('respuesta.login');
     }
 
     /**
@@ -52,6 +53,8 @@ class FrontController extends Controller
     public function store(Request $request)
     {
         //
+
+        
     }
 
     /**
@@ -65,8 +68,6 @@ class FrontController extends Controller
         //
         return Redirect::to('/');
     }
-
-  
 
     /**
      * Update the specified resource in storage.

@@ -27,4 +27,6 @@
 
 {!!Html::script('theme/plugins/boostrapvalidator/validator.js')!!}
 
+{!!Html::script('theme/plugins/msgGrowl/js/msgGrowl.js')!!}
+
 {!!Html::script('theme/js/funciones.js')!!}

@@ -231,12 +231,10 @@
 </table>
 
 <div align="center" class="col-md-12">
-   {!!Html::decode(link_to_route('solicitud/regresar','
     <button class="btn btn-primary " type="button">
         Imprimir
     </button>
-    ',[],['class'=>'']))!!}
-          {!!Html::decode(link_to_route('solicitud/regresar','
+          {!!Html::decode(link_to_route('solicitud/estado','
     <button class="btn btn-warning " type="button">
         Regresar
     </button>

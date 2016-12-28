@@ -3,7 +3,7 @@
 @section('namepage','Ingresar')
 @section('contenido')
 <br/>
-{!! Form::open(['route' => 'solicitudes.store', 'method' => 'POST' ,'name'=>'frm','id'=>'frm','data-toggle'=>'validator' ]) !!}
+{!! Form::open(['route' => 'solicitud/nueva', 'method' => 'POST' ,'name'=>'frm','id'=>'frm','data-toggle'=>'validator' ]) !!}
 <div class="col-md-5">
     <div class="form-group">
         {!! Form::label('', 'Seleccione tipo de usuario que desea realizar el ingreso de traslado:', ['class'=>'parrafo-hts']) !!}

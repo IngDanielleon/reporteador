@@ -19,3 +19,5 @@
 {!!Html::style('theme/plugins/datepicker/datepicker3.css')!!}
 <!-- iCheck for checkboxes and radio inputs -->
 {!!Html::style('theme/plugins/iCheck/all.css')!!}
+
+{!!Html::style('theme/plugins/msgGrowl/css/msgGrowl.css')!!}

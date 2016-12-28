@@ -135,4 +135,6 @@ $(function () {
         $('.notifications a').first().addClass('active');
         $('#notif-group div').first().css('display', 'block');
     });
+
+     
   });

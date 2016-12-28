@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Redirect;
+use Session;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +17,7 @@ class SolicitudesController extends Controller
      */
     public function index()
     {
-        //
+         return view('ingreso.nueva');
     }
 
     /**
@@ -24,7 +25,7 @@ class SolicitudesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
     }
@@ -38,7 +39,14 @@ class SolicitudesController extends Controller
     public function store(Request $request)
     {
         //
-        return view('ingreso.nueva');
+       
+        $solicitud = true;
+        if ($solicitud) {
+            Session::flash('message-success', 'Solicitud ingresada correctamente');
+        } else {
+            Session::flash('message-error', 'Error al ingresar solicitud');
+        }
+         return redirect('/solicitud/ingresar');
     }
 
     /**

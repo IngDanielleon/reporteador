@@ -70,41 +70,87 @@
         <tr>
             <td> {!! Form::label('', 'Departamento donde requiere ser atendido:', ['class'=>'label-hts']) !!}
             </td>
-            <td>{!! Form::select('name', [''=>'Seleccione una opción'], null, ['class'=>'form-control']) !!}
+            <td>
+             <div class="form-group">
+        <div class="">
+             {!! Form::select('name', [''=>'Seleccione una opción']+config('domains.Tipousuario'), null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
             </td>
         </tr>
         <tr>
             <td> {!! Form::label('', 'Municipio donde quiere ser atendido:', ['class'=>'label-hts']) !!}
             </td>
-            <td>{!! Form::select('name', [''=>'Seleccione una opción'], null, ['class'=>'form-control']) !!}
+            <td> <div class="form-group">
+        <div class="">
+             {!! Form::select('name', [''=>'Seleccione una opción']+config('domains.Tipousuario'), null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
             </td>
         </tr>
         <tr>
             <td> {!! Form::label('', 'Tiempo de traslado temporal:', ['class'=>'label-hts']) !!}
             </td>
-            <td>  @foreach(config('domains.Tiempotraslado') as $data)
-             <input class="flat-red" name="tipo" type="radio"/>   {!! Form::label('',$data, ['class'=>'texto-hts']) !!}<br/>
+            <td> 
+
+<div class="form-group">
+        <div class="">
+            @foreach(config('domains.Tiempotraslado') as $data)
+             <input class="flat-red" required name="tipo" type="radio"/>   {!! Form::label('',$data, ['class'=>'texto-hts']) !!}<br/>
              @endforeach
+        <div class="help-block with-errors">
+        </div>
+        </div>
+             </div>
             </td>
         </tr>
         <tr>
             <td> {!! Form::label('', 'Motivo:', ['class'=>'label-hts']) !!}
             </td>
-            <td> @foreach(config('domains.Motivotraslado') as $data)
-             <input class="flat-red" name="tipo" type="radio"/>   {!! Form::label('',$data, ['class'=>'texto-hts']) !!}<br/>
+            <td> 
+
+<div class="form-group">
+        <div class="">
+            @foreach(config('domains.Motivotraslado') as $data)
+             <input class="flat-red" required name="motivo" type="radio"/>   {!! Form::label('',$data, ['class'=>'texto-hts']) !!}<br/>
              @endforeach
+        <div class="help-block with-errors">
+        </div>
+        </div>
+             </div>
             </td>
         </tr>
          <tr>
             <td> {!! Form::label('', 'Fecha en que programó el cambio temporal de municipio:', ['class'=>'label-hts']) !!}
             </td>
-            <td>{!! Form::text('password', null, ['class'=>'form-control fecha','id'=>'datemask']) !!}
+            <td>
+<div class="form-group">
+        <div class="">
+             {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control fecha','id'=>'datemask']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
+
             </td>
         </tr>
          <tr>
             <td> {!! Form::label('', 'Observaciones:', ['class'=>'label-hts']) !!}
             </td>
-            <td>{!! Form::textarea('password', null, ['class'=>'form-control']) !!}
+            <td>
+
+<div class="form-group">
+        <div class="">
+            {!! Form::textarea('', null, ['data-error'=>'Campo requerido','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
+
             </td>
         </tr>
     </tbody>
@@ -122,24 +168,49 @@
             <td>
                 {!! Form::label('', 'Correo Electrónico:', ['class'=>'label-hts']) !!}
             </td>
-            <td>{!! Form::text('password', null, ['class'=>'form-control']) !!}
+            <td>
+            <div class="form-group">
+        <div class="">
+            {!! Form::text('', null, ['required','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
             </td>
             <td>
                 {!! Form::label('', 'Teléfono Fijo de la residencia temporal: ', ['class'=>'label-hts']) !!}
             </td>
-            <td>{!! Form::text('password', null, ['class'=>'form-control']) !!}
+            <td><div class="form-group">
+        <div class="">
+            {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
             </td>
         </tr>
         <tr>
             <td>
                 {!! Form::label('', 'Celular:', ['class'=>'label-hts']) !!}
             </td>
-            <td>{!! Form::text('password', null, ['class'=>'form-control']) !!}
+            <td><div class="form-group">
+        <div class="">
+            {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
             </td>
             <td>
                 {!! Form::label('', 'Dirección temporal de residencia', ['class'=>'label-hts']) !!}
             </td>
-            <td>{!! Form::text('password', null, ['class'=>'form-control']) !!}
+            <td><div class="form-group">
+        <div class="">
+            {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
             </td>
         </tr>
     </tbody>
