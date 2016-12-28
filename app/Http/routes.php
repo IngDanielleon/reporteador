@@ -12,11 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('inicio');
 });
-	
+
+Route::get('solicitud/ingresar', 'FrontController@index')->name('solicitud/ingresar');
+Route::get('solicitud/estado', 'FrontController@create')->name('solicitud/estado');	
+Route::get('solicitud/respuesta', 'FrontController@edit')->name('solicitud/respuesta');	
+Route::get('solicitud/regresar', 'FrontController@show')->name('solicitud/regresar');	
+Route::post('solicitud/buscar', 'SolicitudesController@update')->name('solicitud/buscar');	
+
 Route::resource('login', 'LoginController');
 Route::resource('filtros', 'FiltrosController');
+Route::resource('solicitudes', 'SolicitudesController');
 Route::get('municipios/{id}', 'FiltrosController@getMunicipios');
 
 Route::POST('resultados', 'ResultadosController@index');

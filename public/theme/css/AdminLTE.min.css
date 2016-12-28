@@ -1,4 +1,59 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic);/*!
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic);
+.titulo-hts{
+color: #00A086;
+font-family: sans-serif;
+}
+.parrafo-hts{
+	text-align: justify;
+	color: #0566A8;
+	font-family: sans-serif;
+	font-size: 18px;
+}
+.label-hts{
+	text-align: justify;
+	color: #0566A8;
+	font-family: sans-serif;
+	font-size: 14px;
+}
+.texto-hts{
+	text-align: justify;
+	color: #777777;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+.texto-warning-hts{
+	text-align: justify;
+	color: #FF2626;
+	font-family: sans-serif;
+	font-size: 12px;
+}
+.center{
+	text-align: center;
+}
+
+.th-hts{
+	text-align: justify;
+	color: #FCFCFC;
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #0566A8;
+}
+
+.logo-hts{
+	background-image: url(../image/logo_portabilidad_entrada.png);
+	width:88%;
+	height:145px;
+}
+
+.logo-text-hts{
+	text-align: justify;
+	color: #FCFCFC;
+	font-family: sans-serif;
+	font-size: 24px;
+	background-color: #0566A8;
+	font-weight: bold;
+}
+/*!
  *   AdminLTE v2.3.7
  *   Author: Almsaeed Studio
  *	 Website: Almsaeed Studio <http://almsaeedstudio.com>
