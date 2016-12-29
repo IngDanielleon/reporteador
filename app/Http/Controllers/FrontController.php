@@ -17,7 +17,6 @@ class FrontController extends Controller
     public function index()
     {
         //
-
         return view('ingreso.registro');
     }
 

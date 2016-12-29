@@ -27,7 +27,6 @@
                {!! Form::select('', [''=>'Seleccione una opción']+config('domains.Tipousuario'), null, ['required','data-error'=>'Campo requerido','class'=>'form-control']) !!}
         <div class="help-block with-errors">
         </div>
-           
         </div>
     </div>
  </div>

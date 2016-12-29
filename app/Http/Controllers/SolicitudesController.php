@@ -17,7 +17,7 @@ class SolicitudesController extends Controller
      */
     public function index()
     {
-         return view('ingreso.nueva');
+         
     }
 
     /**
@@ -28,6 +28,7 @@ class SolicitudesController extends Controller
     public function create(Request $request)
     {
         //
+        return view('ingreso.nueva');
     }
 
     /**
