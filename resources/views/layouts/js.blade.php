@@ -3,6 +3,8 @@
 {!!Html::script('theme/js/jquery-2.2.3.min.js')!!}
 {!!Html::script('theme/js/jquery-ui-1.10.3.custom.js')!!}
 {!!Html::script('theme/js/bootstrap-datepicker.js')!!}
+{!!Html::script('theme/plugins/datepicker/locales/bootstrap-datepicker.es.js')!!}
+
 {!!Html::script('theme/js/moment.min.js')!!}
 {!!Html::script('theme/js/jquery.flot.min.js')!!}
 {!!Html::script('theme/js/jquery.flot.pie.min.js')!!}

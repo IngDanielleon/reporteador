@@ -16,41 +16,81 @@
         <tr>
             <td>{!! Form::label('', 'Tipo Identificacion:', ['class'=>'label-hts']) !!}
             </td>
+<<<<<<< HEAD
             <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
+=======
+            <td>
+                {!! Form::label('', config('domains.Tipodocumento')[$afiliado[0]->tipo_identificacion], ['class'=>'']) !!}
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
             </td>
             <td>{!! Form::label('', 'Numero Identificacion:', ['class'=>'label-hts']) !!}
             </td>
+<<<<<<< HEAD
             <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
+=======
+            <td>
+                {!! Form::label('', $afiliado[0]->numero_identificacion, ['class'=>'']) !!}
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
             </td>
         </tr>
         <tr>
             <td>{!! Form::label('', 'Nombres y Apellidos:', ['class'=>'label-hts']) !!}
             </td>
+<<<<<<< HEAD
             <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
+=======
+            <td>
+                {!! Form::label('', $afiliado[0]->primer_nombre." ".$afiliado[0]->segundo_nombre." ".$afiliado[0]->primer_apellido." ".$afiliado[0]->segundo_apellido, ['class'=>'']) !!}
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
             </td>
             <td>{!! Form::label('', 'Fecha de Nacimiento:', ['class'=>'label-hts']) !!}
             </td>
+<<<<<<< HEAD
             <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
+=======
+            <td>
+                {!! Form::label('', $afiliado[0]->fecha_nacimiento, ['class'=>'']) !!}
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
             </td>
         </tr>
         <tr>
             <td>{!! Form::label('', 'Número de Carnet:', ['class'=>'label-hts']) !!}
             </td>
+<<<<<<< HEAD
             <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
+=======
+            <td>
+                {!! Form::label('', $afiliado[0]->numero_carnet, ['class'=>'']) !!}
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
             </td>
             <td>{!! Form::label('', 'IPS Primaria Asignada', ['class'=>'label-hts']) !!}
             </td>
+<<<<<<< HEAD
             <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
+=======
+            <td>
+                {!! Form::label('', $afiliado[0]->razon_social, ['class'=>'']) !!}
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
             </td>
         </tr>
         <tr>
             <td>{!! Form::label('', 'Departamento Domicilio Afiliación', ['class'=>'label-hts']) !!}
             </td>
+<<<<<<< HEAD
             <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
+=======
+            <td>
+                {!! Form::label('', $afiliado[0]->departamento, ['class'=>'']) !!}
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
             </td>
             <td>{!! Form::label('', 'Municipio Domicilio Afiliación', ['class'=>'label-hts']) !!}
             </td>
+<<<<<<< HEAD
             <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
+=======
+            <td>
+                {!! Form::label('', $afiliado[0]->municipio, ['class'=>'']) !!}
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
             </td>
         </tr>
     </tbody>
@@ -71,6 +111,7 @@
             <td> {!! Form::label('', 'Departamento donde requiere ser atendido:', ['class'=>'label-hts']) !!}
             </td>
             <td>
+<<<<<<< HEAD
              <div class="form-group">
         <div class="">
              {!! Form::select('name', [''=>'Seleccione una opción']+config('domains.Tipousuario'), null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
@@ -78,11 +119,21 @@
         </div>
         </div>
     </div>
+=======
+                <div class="form-group">
+                    <div class="">
+                        {!! Form::select('name', [''=>'Seleccione una opción']+$departamentos, null, ['id'=>'departamento','required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+                        <div class="help-block with-errors">
+                        </div>
+                    </div>
+                </div>
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
             </td>
         </tr>
         <tr>
             <td> {!! Form::label('', 'Municipio donde quiere ser atendido:', ['class'=>'label-hts']) !!}
             </td>
+<<<<<<< HEAD
             <td> <div class="form-group">
         <div class="">
              {!! Form::select('name', [''=>'Seleccione una opción']+config('domains.Tipousuario'), null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
@@ -90,6 +141,16 @@
         </div>
         </div>
     </div>
+=======
+            <td>
+                <div class="form-group">
+                    <div class="">
+                        {!! Form::select('name', [''=>'Seleccione una opción'], null, ['id'=>'municipio','required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+                        <div class="help-block with-errors">
+                        </div>
+                    </div>
+                </div>
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
             </td>
         </tr>
         <tr>
@@ -217,20 +278,41 @@
 </table>
 
 <div class="col-md-12">
+<<<<<<< HEAD
 <p class="texto-warning-hts">
 Apreciado afiliado, en máximo 10 días hábiles COMPARTA EPSS dará respuesta a su solicitud. Le agradecemos estar pendiente de los medios que usted suministro para contactarlo.
 </p>
 <p class="center">
 Fecha de recepción de la Solicitud: 2016-12-28 Radicado No. 475700000000043
 </p>
+=======
+    <p class="texto-warning-hts">
+        Apreciado afiliado, en máximo 10 días hábiles COMPARTA EPSS dará respuesta a su solicitud. Le agradecemos estar pendiente de los medios que usted suministro para contactarlo.
+    </p>
+    <p class="center">
+        Fecha de recepción de la Solicitud: {{$fechactual}} Radicado No. {{number_format($consecutivo, 0, ",", "")}}
+    </p>
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
 </div>
 
 <div align="center" class="col-md-12">
+<<<<<<< HEAD
           {!!Form::submit('Solicitar', ['class'=>'btn btn-primary']) !!}
           {!!Html::decode(link_to_route('solicitud/ingresar','<button type="button" class="btn btn-warning ">Cancelar</button>
         ',[],['class'=>'']))!!}
          <br/>
      <br/>
      </div>
+=======
+    {!!Form::submit('Solicitar', ['class'=>'btn btn-primary']) !!}
+    {!!Html::decode(link_to_route('solicitud/ingresar','
+    <button class="btn btn-warning " type="button">
+        Cancelar
+    </button>
+    ',[],['class'=>'']))!!}
+    <br/>
+    <br/>
+</div>
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
 {!! Form::close() !!}
 @stop

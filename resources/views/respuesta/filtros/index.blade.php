@@ -1,9 +1,7 @@
 @extends('layouts.base')
 @section('titulo','portabilidad')
+@section('namepage','Filtros de Busqueda')
 @section('contenido')
-<center>
-<h1>Filtros de Busqueda</h1>
-</center>
 <br>
 <div class="col-md-12">
 

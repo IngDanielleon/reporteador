@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Departamento;
 use App\Http\Controllers\Controller;
+use Auth;
 use App\solicitudes_portabilidad_jb;
 use Illuminate\Http\Request;
 use Carbon\Carbon;

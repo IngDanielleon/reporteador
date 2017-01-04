@@ -13,7 +13,7 @@
             <div class="logo-hts">
             </div>
             <div class="logo-text-hts">
-                @yield('namepage','')
+               &nbsp; @yield('namepage','')
             </div>
             <br/>
             <br/>

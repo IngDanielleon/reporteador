@@ -2,11 +2,7 @@
 @section('titulo','portabilidad')
 @section('namepage','Tablero de Control')
 @section('contenido')
-<center>
-<h1>Tablero de Control</h1>
-</center>
-<br>
-
+<br/>
 <div class="col-md-12">
 
 <div class="col-md-4">
@@ -101,6 +97,7 @@
 <h1>Tabla de Portabilidad</h1>
 <br>
 </center>
+<<<<<<< HEAD
 
 @include('respuesta.resultados.tabla') 
 
@@ -109,6 +106,9 @@
         ',[],['class'=>'']))!!}
 </center>
 <br>
+=======
+@include('respuesta.resultados.tabla') 
+>>>>>>> 9e4aec7449517d89023ec5a47f305324838e35be
 </div>
 
 @section('script')
