@@ -6,6 +6,7 @@ use App\Departamento;
 use App\Http\Controllers\Controller;
 use App\solicitudes_portabilidad_jb;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class FiltrosController extends Controller
 {
@@ -40,12 +41,13 @@ class FiltrosController extends Controller
     {
         $departamento = $request['departamento'];
         $municipio    = $request['municipio'];
-        $fechainicio  = $request['fecha_inicio'];
-        $fechafin     = $request['fecha_fin'];
+        $fechainicio  = Carbon::parse($request['fecha_inicial'])->format('Y-m-d');
+        $fechafin     = Carbon::parse($request['fecha_final'])->format('Y-m-d');
         $estado       = $request['estado'];
         $pendientes   = 0;
         $aprobadas    = 0;
         $rechazados   = 0;
+
 
         $where = " tb_municipio.municipio = '" . $departamento . "'";
 
@@ -76,11 +78,11 @@ class FiltrosController extends Controller
         $correo_electronico   = solicitudes_portabilidad_jb::join('tb_municipio', 'tb_municipio.descripcion', '=', 'solicitudes_portabilidad_jb.departamento_siic')->where('tipo_usuario', '5')->whereRaw($where)->count();
         $afiliado             = solicitudes_portabilidad_jb::join('tb_municipio', 'tb_municipio.descripcion', '=', 'solicitudes_portabilidad_jb.departamento_siic')->where('tipo_usuario', '')->whereRaw($where)->count();
 
-        $portabilidad = solicitudes_portabilidad_jb::select('radicado', 'estado_solicitud', 'departamento_siic', 'municipio_siic', 'solicitudes_portabilidad_jb.departamento', 'solicitudes_portabilidad_jb.municipio')->join('tb_municipio', 'tb_municipio.descripcion', '=', 'solicitudes_portabilidad_jb.departamento_siic')->whereRaw($where)->get();
+        $portabilidad = solicitudes_portabilidad_jb::select('radicado', 'estado_solicitud', 'departamento_siic', 'municipio_siic', 'solicitudes_portabilidad_jb.departamento', 'solicitudes_portabilidad_jb.municipio')->join('tb_municipio', 'tb_municipio.descripcion', '=', 'solicitudes_portabilidad_jb.departamento_siic')->whereRaw($where)->where('estado_solicitud', $estado)->whereBetween('fecha_solicitud',[$fechainicio, $fechafin])->get();
 
         return view('respuesta.resultados.index', compact('aprobadas', 'rechazados', 'pendientes', 'agencia_de_servicios', 'agencia_social', 'ips', 'call_center', 'secretaria_salud', 'correo_electronico', 'afiliado', 'portabilidad'));
     }
-
+ 
     /** 
      * Display the specified resource.
      *
