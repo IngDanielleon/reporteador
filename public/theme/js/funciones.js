@@ -138,3 +138,49 @@ $(function () {
 
      
   });
+
+
+
+//////////////////////////////////////////
+
+$(document).ready(function() {
+    var handleDataTableButtons = function() {
+        if ($("#datatable-buttons").length) {
+            $("#datatable-buttons").DataTable({
+                dom: "Bfrtip",
+                buttons: [
+           /** {
+                extend: "copy",
+                className: "btn btn-sm"
+                },
+                 {
+                   extend: "csv",
+                    className: "btn btn-sm"
+                                },**/ 
+               {
+                  extend: "excel",
+                   className: "btn btn-sm btn-default"
+                }, {
+                    extend: "pdfHtml5",
+                   className: "btn btn-sm btn-default"
+               }, {
+                   extend: "print",
+                  className: "btn btn-sm btn-default"
+                }, 
+                ],
+                responsive: false
+            });
+        }
+    };
+    $('#datatable').dataTable();
+    $('#datatable-responsive').DataTable();
+    TableManageButtons = function() {
+        "use strict";
+        return {
+            init: function() {
+                handleDataTableButtons();
+            }
+        };
+    }();
+    TableManageButtons.init();
+});

@@ -2,7 +2,7 @@
 @section('titulo','Estado de solicitud')
 @section('namepage','Ver solicitud radicada')
 @section('contenido')
-{!! Form::open(['route' => 'solicitud/buscar', 'method' => 'POST','name'=>'frm','id'=>'frm','data-toggle'=>'validator' ]) !!}
+{!! Form::open(['route' => 'filtros/mostrar', 'method' => 'POST','name'=>'frm','id'=>'frm','data-toggle'=>'validator' ]) !!}
  <div class="col-md-3">
  </div>
  <div class="col-md-6">
@@ -14,7 +14,7 @@
                 <i class="fa fa-id-card">
                 </i>
             </span>
-               {!! Form::text('', null, ['required','data-error'=>'Campo requerido','class'=>'form-control']) !!}
+               {!! Form::text('id', null, ['required','data-error'=>'Campo requerido','class'=>'form-control']) !!}
             <div class="help-block with-errors">
             </div>
             </div>

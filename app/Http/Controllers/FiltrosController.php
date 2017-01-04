@@ -81,15 +81,20 @@ class FiltrosController extends Controller
         return view('respuesta.resultados.index', compact('aprobadas', 'rechazados', 'pendientes', 'agencia_de_servicios', 'agencia_social', 'ips', 'call_center', 'secretaria_salud', 'correo_electronico', 'afiliado', 'portabilidad'));
     }
 
-    /**
+    /** 
      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request,  $id)
     {
-        //
+         $parametro = $id;
+        if(isset($request['id'])){
+            $parametro = $request['id'];
+        }
+        $reporte = solicitudes_portabilidad_jb::where('radicado', '=', $parametro)->get();
+        return view('estado.mostrar', compact('reporte'));   
     }
 
     /**

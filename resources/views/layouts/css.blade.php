@@ -21,3 +21,9 @@
 {!!Html::style('theme/plugins/iCheck/all.css')!!}
 
 {!!Html::style('theme/plugins/msgGrowl/css/msgGrowl.css')!!}
+
+{!!Html::style('theme/plugins/datatables/dataTables.bootstrap.css')!!}
+  {!!Html::style('theme/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css')!!}
+  {!!Html::style('theme/plugins/datatables/extensions/Responsive/css/dataTables.responsive.css')!!}
+  {!!Html::style('theme/plugins/datatables/extensions/FixedHeader/css/dataTables.fixedHeader.min.css')!!}
+  {!!Html::style('theme/plugins/datatables/extensions/Buttons/buttons.bootstrap.min.css')!!}

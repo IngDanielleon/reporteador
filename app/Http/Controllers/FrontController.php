@@ -17,7 +17,8 @@ class FrontController extends Controller
     public function index()
     {
         //
-        return view('ingreso.registro');
+
+        return view('ingreso.registro'); 
     }
 
     /**
@@ -89,5 +90,10 @@ class FrontController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function back()
+    {   
+        return Redirect::to('/filtros');
     }
 }

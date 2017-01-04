@@ -9,7 +9,7 @@
     </h1>
     <br/>
     <p class="parrafo-hts">
-        Por el cual se reglamenta el artículo 22 de la Ley 1438 de 2011 sobre portabilidad nacional en el Sistema General de Seguridad Social en Salud, en donde se dispone que: "Todas las Entidades Promotoras de Salud deberán garantizar el acceso a los servicios de salud en el territorio nacional, a través de acuerdos con prestadores de servicios de salud y Entidades Promotoras de Salud. Las Entidades Promotoras de Salud podrán ofrecer los planes de beneficios en los dos regímenes, preservando los atributos de continuidad, longitudinalidad, integralidad, y adscripción individual y familiar a los equipos básicos de salud y redes integradas de servicios. El acceso a la atención de salud será a través de la cédula de ciudadanía u otro documento de identidad. (. . .)”. <a target="_blank" href="http://localhost/reporteador/public/archivos/Decreto_1683_de_2013.pdf">{!!Html::image('archivos/pdf.png')!!}</button></a>
+        Por el cual se reglamenta el artículo 22 de la Ley 1438 de 2011 sobre portabilidad nacional en el Sistema General de Seguridad Social en Salud, en donde se dispone que: "Todas las Entidades Promotoras de Salud deberán garantizar el acceso a los servicios de salud en el territorio nacional, a través de acuerdos con prestadores de servicios de salud y Entidades Promotoras de Salud. Las Entidades Promotoras de Salud podrán ofrecer los planes de beneficios en los dos regímenes, preservando los atributos de continuidad, longitudinalidad, integralidad, y adscripción individual y familiar a los equipos básicos de salud y redes integradas de servicios. El acceso a la atención de salud será a través de la cédula de ciudadanía u otro documento de identidad. (. . .)”.
     </p>
     <br/>
     <br/>

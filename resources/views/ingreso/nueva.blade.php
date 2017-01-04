@@ -7,66 +7,50 @@
 <table class="table table-striped table-bordered ">
     <thead>
         <tr>
-            <th class="th-hts" colspan="4">
+            <th colspan="4" class="th-hts">
                 1. Identificación del afiliado
             </th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>
-                {!! Form::label('', 'Tipo Identificacion:', ['class'=>'label-hts']) !!}
+            <td>{!! Form::label('', 'Tipo Identificacion:', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+            <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
             </td>
-            <td>
-                {!! Form::label('', 'Numero Identificacion:', ['class'=>'label-hts']) !!}
+            <td>{!! Form::label('', 'Numero Identificacion:', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+            <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
             </td>
         </tr>
         <tr>
-            <td>
-                {!! Form::label('', 'Nombres y Apellidos:', ['class'=>'label-hts']) !!}
+            <td>{!! Form::label('', 'Nombres y Apellidos:', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+            <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
             </td>
-            <td>
-                {!! Form::label('', 'Fecha de Nacimiento:', ['class'=>'label-hts']) !!}
+            <td>{!! Form::label('', 'Fecha de Nacimiento:', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+            <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
             </td>
         </tr>
         <tr>
-            <td>
-                {!! Form::label('', 'Número de Carnet:', ['class'=>'label-hts']) !!}
+            <td>{!! Form::label('', 'Número de Carnet:', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+            <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
             </td>
-            <td>
-                {!! Form::label('', 'IPS Primaria Asignada', ['class'=>'label-hts']) !!}
+            <td>{!! Form::label('', 'IPS Primaria Asignada', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+            <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
             </td>
         </tr>
         <tr>
-            <td>
-                {!! Form::label('', 'Departamento Domicilio Afiliación', ['class'=>'label-hts']) !!}
+            <td>{!! Form::label('', 'Departamento Domicilio Afiliación', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+            <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
             </td>
-            <td>
-                {!! Form::label('', 'Municipio Domicilio Afiliación', ['class'=>'label-hts']) !!}
+            <td>{!! Form::label('', 'Municipio Domicilio Afiliación', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+            <td>{!! Form::label('', '&nbsp;', ['class'=>'']) !!}
             </td>
         </tr>
     </tbody>
@@ -74,7 +58,7 @@
 <table class="table table-striped table-bordered ">
     <thead>
         <tr>
-            <th class="th-hts" colspan="2">
+            <th colspan="2" class="th-hts">
                 2. Soliciud de portabilidad
                 <small>
                     (Cambio Temporal de Municipio)
@@ -84,96 +68,89 @@
     </thead>
     <tbody>
         <tr>
-            <td>
-                {!! Form::label('', 'Departamento donde requiere ser atendido:', ['class'=>'label-hts']) !!}
+            <td> {!! Form::label('', 'Departamento donde requiere ser atendido:', ['class'=>'label-hts']) !!}
             </td>
             <td>
-                <div class="form-group">
-                    <div class="">
-                        {!! Form::select('name', [''=>'Seleccione una opción']+config('domains.Tipousuario'), null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
-                        <div class="help-block with-errors">
-                        </div>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                {!! Form::label('', 'Municipio donde quiere ser atendido:', ['class'=>'label-hts']) !!}
-            </td>
-            <td>
-                <div class="form-group">
-                    <div class="">
-                        {!! Form::select('name', [''=>'Seleccione una opción']+config('domains.Tipousuario'), null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
-                        <div class="help-block with-errors">
-                        </div>
-                    </div>
-                </div>
+             <div class="form-group">
+        <div class="">
+             {!! Form::select('name', [''=>'Seleccione una opción']+config('domains.Tipousuario'), null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
             </td>
         </tr>
         <tr>
-            <td>
-                {!! Form::label('', 'Tiempo de traslado temporal:', ['class'=>'label-hts']) !!}
+            <td> {!! Form::label('', 'Municipio donde quiere ser atendido:', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                <div class="form-group">
-                    <div class="">
-                        @foreach(config('domains.Tiempotraslado') as $data)
-                        <input class="flat-red" name="tipo" required="" type="radio"/>
-                        {!! Form::label('',$data, ['class'=>'texto-hts']) !!}
-                        <br/>
-                        @endforeach
-                        <div class="help-block with-errors">
-                        </div>
-                    </div>
-                </div>
+            <td> <div class="form-group">
+        <div class="">
+             {!! Form::select('name', [''=>'Seleccione una opción']+config('domains.Tipousuario'), null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
             </td>
         </tr>
         <tr>
-            <td>
-                {!! Form::label('', 'Motivo:', ['class'=>'label-hts']) !!}
+            <td> {!! Form::label('', 'Tiempo de traslado temporal:', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                <div class="form-group">
-                    <div class="">
-                        @foreach(config('domains.Motivotraslado') as $data)
-                        <input class="flat-red" name="motivo" required="" type="radio"/>
-                        {!! Form::label('',$data, ['class'=>'texto-hts']) !!}
-                        <br/>
-                        @endforeach
-                        {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
-                        <div class="help-block with-errors">
-                        </div>
-                    </div>
-                </div>
+            <td> 
+
+<div class="form-group">
+        <div class="">
+            @foreach(config('domains.Tiempotraslado') as $data)
+             <input class="flat-red" required name="tipo" type="radio"/>   {!! Form::label('',$data, ['class'=>'texto-hts']) !!}<br/>
+             @endforeach
+        <div class="help-block with-errors">
+        </div>
+        </div>
+             </div>
             </td>
         </tr>
         <tr>
-            <td>
-                {!! Form::label('', 'Fecha en que programó el cambio temporal de municipio:', ['class'=>'label-hts']) !!}
+            <td> {!! Form::label('', 'Motivo:', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                <div class="form-group">
-                    <div class="">
-                        {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control fecha','id'=>'datemask']) !!}
-                        <div class="help-block with-errors">
-                        </div>
-                    </div>
-                </div>
+            <td> 
+
+<div class="form-group">
+        <div class="">
+            @foreach(config('domains.Motivotraslado') as $data)
+             <input class="flat-red" required name="motivo" type="radio"/>   {!! Form::label('',$data, ['class'=>'texto-hts']) !!}<br/>
+             @endforeach
+        <div class="help-block with-errors">
+        </div>
+        </div>
+             </div>
             </td>
         </tr>
-        <tr>
-            <td>
-                {!! Form::label('', 'Observaciones:', ['class'=>'label-hts']) !!}
+         <tr>
+            <td> {!! Form::label('', 'Fecha en que programó el cambio temporal de municipio:', ['class'=>'label-hts']) !!}
             </td>
             <td>
-                <div class="form-group">
-                    <div class="">
-                        {!! Form::textarea('', null, ['data-error'=>'Campo requerido','class'=>'form-control']) !!}
-                        <div class="help-block with-errors">
-                        </div>
-                    </div>
-                </div>
+<div class="form-group">
+        <div class="">
+             {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control fecha','id'=>'datemask']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
+
+            </td>
+        </tr>
+         <tr>
+            <td> {!! Form::label('', 'Observaciones:', ['class'=>'label-hts']) !!}
+            </td>
+            <td>
+
+<div class="form-group">
+        <div class="">
+            {!! Form::textarea('', null, ['data-error'=>'Campo requerido','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
+
             </td>
         </tr>
     </tbody>
@@ -181,7 +158,7 @@
 <table class="table table-striped table-bordered ">
     <thead>
         <tr>
-            <th class="th-hts" colspan="4">
+            <th colspan="4" class="th-hts">
                 3. Información de contacto
             </th>
         </tr>
@@ -192,72 +169,68 @@
                 {!! Form::label('', 'Correo Electrónico:', ['class'=>'label-hts']) !!}
             </td>
             <td>
-                <div class="form-group">
-                    <div class="">
-                        {!! Form::text('', null, ['required','class'=>'form-control']) !!}
-                        <div class="help-block with-errors">
-                        </div>
-                    </div>
-                </div>
+            <div class="form-group">
+        <div class="">
+            {!! Form::text('', null, ['required','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
             </td>
             <td>
                 {!! Form::label('', 'Teléfono Fijo de la residencia temporal: ', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                <div class="form-group">
-                    <div class="">
-                        {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
-                        <div class="help-block with-errors">
-                        </div>
-                    </div>
-                </div>
+            <td><div class="form-group">
+        <div class="">
+            {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
             </td>
         </tr>
         <tr>
             <td>
                 {!! Form::label('', 'Celular:', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                <div class="form-group">
-                    <div class="">
-                        {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
-                        <div class="help-block with-errors">
-                        </div>
-                    </div>
-                </div>
+            <td><div class="form-group">
+        <div class="">
+            {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
             </td>
             <td>
                 {!! Form::label('', 'Dirección temporal de residencia', ['class'=>'label-hts']) !!}
             </td>
-            <td>
-                <div class="form-group">
-                    <div class="">
-                        {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
-                        <div class="help-block with-errors">
-                        </div>
-                    </div>
-                </div>
+            <td><div class="form-group">
+        <div class="">
+            {!! Form::text('', null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+        <div class="help-block with-errors">
+        </div>
+        </div>
+    </div>
             </td>
         </tr>
     </tbody>
 </table>
+
 <div class="col-md-12">
-    <p class="texto-warning-hts">
-        Apreciado afiliado, en máximo 10 días hábiles COMPARTA EPSS dará respuesta a su solicitud. Le agradecemos estar pendiente de los medios que usted suministro para contactarlo.
-    </p>
-    <p class="center">
-        Fecha de recepción de la Solicitud: 2016-12-28 Radicado No. 475700000000043
-    </p>
+<p class="texto-warning-hts">
+Apreciado afiliado, en máximo 10 días hábiles COMPARTA EPSS dará respuesta a su solicitud. Le agradecemos estar pendiente de los medios que usted suministro para contactarlo.
+</p>
+<p class="center">
+Fecha de recepción de la Solicitud: 2016-12-28 Radicado No. 475700000000043
+</p>
 </div>
+
 <div align="center" class="col-md-12">
-    {!!Form::submit('Solicitar', ['class'=>'btn btn-primary']) !!}
-          {!!Html::decode(link_to_route('solicitud/ingresar','
-    <button class="btn btn-warning " type="button">
-        Cancelar
-    </button>
-    ',[],['class'=>'']))!!}
-    <br/>
-    <br/>
-</div>
+          {!!Form::submit('Solicitar', ['class'=>'btn btn-primary']) !!}
+          {!!Html::decode(link_to_route('solicitud/ingresar','<button type="button" class="btn btn-warning ">Cancelar</button>
+        ',[],['class'=>'']))!!}
+         <br/>
+     <br/>
+     </div>
 {!! Form::close() !!}
 @stop

@@ -12,7 +12,7 @@
 {!!Html::script('theme/js/jquery.flot.categories.min.js')!!}
 {!!Html::script('theme/js/jquery.slimscroll.min.js')!!}
 {!!Html::script('theme/plugins/iziModal/js/iziModal.min.js')!!}
-{!!Html::script('theme/js/dataTables.bootstrap.min.js')!!}
+
 
 {!!Html::script('theme/plugins/iCheck/icheck.min.js')!!}
 <!-- Select2 -->
@@ -28,5 +28,20 @@
 {!!Html::script('theme/plugins/boostrapvalidator/validator.js')!!}
 
 {!!Html::script('theme/plugins/msgGrowl/js/msgGrowl.js')!!}
+
+{!!Html::script('theme/plugins/datatables/jquery.dataTables.min.js')!!}
+{!!Html::script('theme/plugins/datatables/dataTables.bootstrap.min.js')!!}
+
+{!!Html::script('theme/plugins/datatables/extensions/Buttons/buttons.html5.min.js')!!}
+{!!Html::script('theme/plugins/datatables/extensions/Buttons/buttons.print.min.js')!!}
+{!!Html::script('theme/plugins/datatables/extensions/Buttons/jszip.min.js')!!}
+{!!Html::script('theme/plugins/datatables/extensions/Buttons/pdfmake.min.js')!!}
+{!!Html::script('theme/plugins/datatables/extensions/Buttons/vfs_fonts.js')!!}
+{!!Html::script('theme/plugins/datatables/extensions/Scroller/js/dataTables.scroller.min.js')!!}
+{!!Html::script('theme/plugins/datatables/extensions/Responsive/js/dataTables.responsive.js')!!}
+{!!Html::script('theme/plugins/datatables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js')!!}
+{!!Html::script('theme/plugins/datatables/dataTables.bootstrap.min.js')!!}
+{!!Html::script('theme/plugins/datatables/extensions/KeyTable/js/dataTables.keyTable.min.js')!!}
+{!!Html::script('theme/plugins/datatables/extensions/Buttons/dataTables.buttons.min.js')!!}
 
 {!!Html::script('theme/js/funciones.js')!!}

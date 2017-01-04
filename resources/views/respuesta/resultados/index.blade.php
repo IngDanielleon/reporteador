@@ -1,5 +1,6 @@
 @extends('layouts.base')
 @section('titulo','portabilidad')
+@section('namepage','Tablero de Control')
 @section('contenido')
 <center>
 <h1>Tablero de Control</h1>
@@ -100,7 +101,14 @@
 <h1>Tabla de Portabilidad</h1>
 <br>
 </center>
-@include('resultados.tabla') 
+
+@include('respuesta.resultados.tabla') 
+
+<center>
+{!!Html::decode(link_to_route('solicitud/atras','<button type="button" class="btn btn-warning ">Regresar al Filtro</button>
+        ',[],['class'=>'']))!!}
+</center>
+<br>
 </div>
 
 @section('script')
