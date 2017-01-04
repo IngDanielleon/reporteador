@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Auth;
 use Redirect;
 use Session;
 
@@ -40,6 +41,9 @@ class FrontController extends Controller
     public function edit()
     {
         //
+        if(Auth::check()){
+         return  Redirect::to('/filtros');
+        }
         return view('respuesta.login');
     }
 

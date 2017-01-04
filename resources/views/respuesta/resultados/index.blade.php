@@ -1,11 +1,8 @@
 @extends('layouts.base')
 @section('titulo','portabilidad')
+@section('namepage','Tablero de Control')
 @section('contenido')
-<center>
-<h1>Tablero de Control</h1>
-</center>
-<br>
-
+<br/>
 <div class="col-md-12">
 
 <div class="col-md-4">
@@ -100,7 +97,7 @@
 <h1>Tabla de Portabilidad</h1>
 <br>
 </center>
-@include('resultados.tabla') 
+@include('respuesta.resultados.tabla') 
 </div>
 
 @section('script')

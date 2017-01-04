@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\User;
-use Redirect;
-use Auth;
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\User;
+use Auth;
+use Illuminate\Http\Request;
+use Redirect;
+use Session;
 
 class LoginController extends Controller
 {
@@ -29,6 +29,8 @@ class LoginController extends Controller
     public function create()
     {
         //
+        Auth::logout();
+        return Redirect::to('/');
     }
 
     /**
@@ -40,16 +42,22 @@ class LoginController extends Controller
     public function store(Request $request)
     {
         //
-        $AuthUser = User::where('usuario',$request['user'])
-        ->where('clave',md5($request['password']))
-        ->get();
-       // dd($request['user'], $request['password'], $AuthUser);
-        if(count($AuthUser)>0){
-            Auth::login($AuthUser[0],true);
-             return Redirect::to('/filtros');
+        $AuthUser = User::where('usuario', $request['user'])
+            ->where('clave', md5($request['password']))
+            ->get();
+
+        if (count($AuthUser) > 0) {
+            Auth::login($AuthUser[0], true);
+            if (Auth::check()) {
+                return Redirect::to('/filtros');
+            } else {
+                Session::flash('message-error', 'Error al autenticar usuario');
+            }
         }
 
-         return  Redirect::to('/');
+        Session::flash('message-error', 'Nombre o contraseña incorrectos');
+        return Redirect::to('/solicitud/respuesta');
+
     }
 
     /**

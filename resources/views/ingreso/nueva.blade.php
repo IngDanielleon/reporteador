@@ -18,13 +18,13 @@
                 {!! Form::label('', 'Tipo Identificacion:', ['class'=>'label-hts']) !!}
             </td>
             <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+                {!! Form::label('', config('domains.Tipodocumento')[$afiliado[0]->tipo_identificacion], ['class'=>'']) !!}
             </td>
             <td>
                 {!! Form::label('', 'Numero Identificacion:', ['class'=>'label-hts']) !!}
             </td>
             <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+                {!! Form::label('', $afiliado[0]->numero_identificacion, ['class'=>'']) !!}
             </td>
         </tr>
         <tr>
@@ -32,13 +32,13 @@
                 {!! Form::label('', 'Nombres y Apellidos:', ['class'=>'label-hts']) !!}
             </td>
             <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+                {!! Form::label('', $afiliado[0]->primer_nombre." ".$afiliado[0]->segundo_nombre." ".$afiliado[0]->primer_apellido." ".$afiliado[0]->segundo_apellido, ['class'=>'']) !!}
             </td>
             <td>
                 {!! Form::label('', 'Fecha de Nacimiento:', ['class'=>'label-hts']) !!}
             </td>
             <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+                {!! Form::label('', $afiliado[0]->fecha_nacimiento, ['class'=>'']) !!}
             </td>
         </tr>
         <tr>
@@ -46,13 +46,13 @@
                 {!! Form::label('', 'Número de Carnet:', ['class'=>'label-hts']) !!}
             </td>
             <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+                {!! Form::label('', $afiliado[0]->numero_carnet, ['class'=>'']) !!}
             </td>
             <td>
                 {!! Form::label('', 'IPS Primaria Asignada', ['class'=>'label-hts']) !!}
             </td>
             <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+                {!! Form::label('', $afiliado[0]->razon_social, ['class'=>'']) !!}
             </td>
         </tr>
         <tr>
@@ -60,13 +60,13 @@
                 {!! Form::label('', 'Departamento Domicilio Afiliación', ['class'=>'label-hts']) !!}
             </td>
             <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+                {!! Form::label('', $afiliado[0]->departamento, ['class'=>'']) !!}
             </td>
             <td>
                 {!! Form::label('', 'Municipio Domicilio Afiliación', ['class'=>'label-hts']) !!}
             </td>
             <td>
-                {!! Form::label('', ' ', ['class'=>'']) !!}
+                {!! Form::label('', $afiliado[0]->municipio, ['class'=>'']) !!}
             </td>
         </tr>
     </tbody>
@@ -90,7 +90,7 @@
             <td>
                 <div class="form-group">
                     <div class="">
-                        {!! Form::select('name', [''=>'Seleccione una opción']+config('domains.Tipousuario'), null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+                        {!! Form::select('name', [''=>'Seleccione una opción']+$departamentos, null, ['id'=>'departamento','required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
                         <div class="help-block with-errors">
                         </div>
                     </div>
@@ -104,7 +104,7 @@
             <td>
                 <div class="form-group">
                     <div class="">
-                        {!! Form::select('name', [''=>'Seleccione una opción']+config('domains.Tipousuario'), null, ['required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
+                        {!! Form::select('name', [''=>'Seleccione una opción'], null, ['id'=>'municipio','required', 'data-error'=>'Campo requerido','class'=>'form-control']) !!}
                         <div class="help-block with-errors">
                         </div>
                     </div>
@@ -246,12 +246,12 @@
         Apreciado afiliado, en máximo 10 días hábiles COMPARTA EPSS dará respuesta a su solicitud. Le agradecemos estar pendiente de los medios que usted suministro para contactarlo.
     </p>
     <p class="center">
-        Fecha de recepción de la Solicitud: 2016-12-28 Radicado No. 475700000000043
+        Fecha de recepción de la Solicitud: {{$fechactual}} Radicado No. {{number_format($consecutivo, 0, ",", "")}}
     </p>
 </div>
 <div align="center" class="col-md-12">
     {!!Form::submit('Solicitar', ['class'=>'btn btn-primary']) !!}
-          {!!Html::decode(link_to_route('solicitud/ingresar','
+    {!!Html::decode(link_to_route('solicitud/ingresar','
     <button class="btn btn-warning " type="button">
         Cancelar
     </button>

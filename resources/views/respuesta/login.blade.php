@@ -33,7 +33,7 @@
 <div class="col-sm-4">
 </div>
 <div align="center" class="col-md-12">
-          {!!Form::submit('Iniciar Sesión', ['class'=>'btn btn-primary']) !!}
+          {!!Form::submit('Iniciar', ['class'=>'btn btn-primary']) !!}
           {!!Html::decode(link_to_route('solicitud/regresar','<button type="button" class="btn btn-warning ">Regresar</button>
         ',[],['class'=>'']))!!}
      </div>

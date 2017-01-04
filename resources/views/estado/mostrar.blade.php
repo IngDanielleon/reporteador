@@ -242,4 +242,12 @@
 
 </div>
 <br/><br/><br/>
+@section('script')
+<script type="text/javascript">
+    var menu = <?php echo $menu; ?>;
+    if(menu){
+      $("#menu").attr('class','hidden');
+    }
+</script>
+@stop
 @stop
